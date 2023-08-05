@@ -15,23 +15,31 @@ function Favorite() {
     updateFavoriteFromLocalStorage();
   }, [setFavorite]);
   return (
-    <div>
-      <h1>Your Favorites</h1>
+    <div className="max-w-screen-xl  mx-auto px-6">
+      <h1 className="font-Oswald text-5xl text-colormain flex flex-col items-center mt-28 mb-10">
+        <span className="absolute h-[2px] w-32 bg-colormain"></span>
+        FAVORITES
+      </h1>
       <div>
         {favorite.length === 0 ? (
           <h1>No Favorite</h1>
         ) : (
           favorite.map((food) => (
-            <div key={food.id}>
-              <Link to={"/recipe/" + food.id}>
-                <img
-                  className="w-[20rem] p-5  border-[8px] border-solid border-white"
-                  src={food.image}
-                  alt={food.title}
-                />
+            <div
+              key={food.id}
+              className="flex outline rounded-md flex-col outline-colormain my-5 md:justify-between md:items-center md:flex-row "
+            >
+              <Link
+                className="flex items-center md:gap-6 font-Oswald lg:text-xl"
+                to={"/recipe/" + food.id}
+              >
+                <img className="w-[20rem] " src={food.image} alt={food.title} />
                 <p>{food.title}</p>
               </Link>
-              <button onClick={() => removeFavorites(food.id)}>
+              <button
+                className="md:h-[15rem] bg-red-900 hover:bg-red-800 font-Lato font-extrabold p-[1.3rem] "
+                onClick={() => removeFavorites(food.id)}
+              >
                 Remove as Favorite
               </button>
             </div>

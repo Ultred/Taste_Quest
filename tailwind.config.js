@@ -4,12 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        colormain: "#743000",
-        colorsec: "#FFCA52",
+        colorwhite: "#FFFFFF",
+        colormain: "#38221C",
+        colorbutton: "#1C382C",
       },
       fontFamily: {
-        Montserrat: ["Montserrat", "sans-serif"],
-        Serif: ["PT Serif", "serif"],
+        Lato: ["Lato", "sans-serif"],
+        Oswald: ["Oswald", "serif"],
       },
     },
   },

@@ -16,7 +16,7 @@ function SearchBar() {
         placeholder="Search..."
         value={inputSearch}
         onChange={(e) => setInputSearch(e.target.value)}
-        className="outline outline-2 outline-colormain rounded-md  md:w-[16rem] px-4 font-Serif h-11 my-auto w-[12rem]"
+        className="outline outline-2 outline-colormain rounded-md  md:w-[16rem] px-4 font-Serif h-11 my-auto w-full "
       />
       <BiSearch
         onClick={submitHandler}

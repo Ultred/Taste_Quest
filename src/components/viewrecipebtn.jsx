@@ -6,7 +6,7 @@ function Viewrecipebtn({ trending }) {
 
   return (
     <button
-      className="outline outline-2 outline-colormain rounded-md px-6 py-3 font-bold my-4 hover:bg-colorsec"
+      className="border border-colorwhite text-colorwhite mr-4 p-3 rounded-md bg-green-900 hover:bg-green-800 font-Lato font-extrabold"
       onClick={() => {
         navigate("/recipe/" + trending);
       }}
