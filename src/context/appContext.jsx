@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const AppContext = createContext(null);
 
@@ -17,7 +17,7 @@ function AppContextProvider({ children }) {
     setFavorite(newRecipe);
     localStorage.setItem("Favorites", JSON.stringify(newRecipe));
   };
-  useEffect(() => {}, []);
+
   const removeFavorites = (id) => {
     const check = localStorage.getItem("Favorites");
 
